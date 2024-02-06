@@ -1,0 +1,20 @@
+{
+    "name": "mario/app-salon",
+    "description": "Proyecto PHP SASS MYSQL MVC GULP",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "MVC\\": "./",
+            "MVC\\Controllers\\": "./controllers",
+            "MVC\\Models\\": "./models"
+            
+        }
+    },
+    "authors": [
+        {
+            "name": "nicoconti1901",
+            "email": "nico.conti.1901@gmail.com"
+        }
+    ],
+    "require": {}
+}

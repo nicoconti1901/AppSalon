@@ -31,5 +31,34 @@ class Usuario extends ActiveRecord {
         $this->token = $args['token'] ?? '';
     }
 
+    //Mensaje de validacion para crear cuenta
+    public function validarCuentaUsuario(){
+        if(!$this->nombre){
+            self::$alertas['error'][] = "Debes colocar tu nombre";
+        }
+        if(!$this->apellido){
+            self::$alertas['error'][] = "Debes colocar tu apellido";
+        }
+        if(!$this->email){
+            self::$alertas['error'][] = "Debes colocar tu email";
+        }
+        if(!$this->password){
+            self::$alertas['error'][] = "Debes colocar tu contraseña";
+        }
+        if(!$this->telefono){
+            self::$alertas['error'][] = "Debes colocar tu telefono";
+        }
+        if($this->admin){
+            self::$alertas[] = "Debes colocar tu admin";
+        }
+        if($this->confirmado){
+            self::$alertas[] = "Debes colocar tu confirmado";
+        }
+        if(!$this->token){
+            self::$alertas[] = "Debes colocar tu token";
+        }
+        return self::$alertas;
+    }
+
 }
     
